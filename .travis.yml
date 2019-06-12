@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 anguage: node_js
 node_js:
     - 8
@@ -7,4 +8,15 @@ install:
     npm --version
     npm install --registry http://registry.npmjs.org
 script:
+=======
+anguage: node_js
+node_js:
+    - 8
+install:
+|
+    npm install -g npm@latest
+    npm --version
+    npm install --registry http://registry.npmjs.org
+script:
+>>>>>>> refs/remotes/origin/master
     - npm run test-ci
