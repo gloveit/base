@@ -1,0 +1,10 @@
+anguage: node_js
+node_js:
+    - 8
+install:
+|
+    npm install -g npm@latest
+    npm --version
+    npm install --registry http://registry.npmjs.org
+script:
+    - npm run test-ci
