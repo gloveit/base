@@ -1,5 +1,4 @@
 # base
-<<<<<<< HEAD
 
 ## Project setup
 ```
