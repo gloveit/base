@@ -16,6 +16,7 @@ import loadTime from './utils/loadTime'
 
 import animate from 'animate.css'
 
+
 //离线时启动workbox服务
 // if ('serviceWorker' in navigator) {
 //     window.addEventListener('load', () => {

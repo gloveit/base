@@ -1,6 +1,7 @@
 <template>
   <div>
-		<vjsxH :level="1" v-slot:foo>hello world</vjsxH>
+		<!-- <vjsxH :level="1" v-slot:foo>hello world</vjsxH> -->
+		<jsx></jsx>
 		<renH :level="2">hello world</renH>
 		<VNode :vnodes="getV(3)"></VNode>
 		<VNode :vnodes="getY(5)"></VNode>
@@ -8,12 +9,13 @@
 </template>
 
 <script>
-import vjsxH from './v.jsx'
+// import vjsxH from './v.jsx'
+import jsx from './jsx.vue'
 import renH from './render.js'
 export default {
 	name:"index",
 	components: {
-		vjsxH,
+		jsx,
 		renH,
 		VNode:{
 			functional:true,
