@@ -25,7 +25,7 @@ import test from "@/mixins/test.js";
 import tem from "./tem.vue";
 import ren from "./ren.js";
 import loadTime from "@/utils/loadTime";
-import { user_login as userLogin } from "../../../createApi/dist/api.js";
+import { loginUser as userLogin } from "../../../client/javascript/vue-api-client.js";
 
 export default {
   name: "Index",
@@ -88,13 +88,15 @@ export default {
     let load = loadTime();
     console.log(load);
     // throw new Error("this is error")
-    userLogin(
-			{method:"http://rap2api.taobao.org/app/mock/183494/example/1560153444057"},
-			{
-     name:"xiaoming"
-    }).then(function(response) {
-      console.log(response.data); // {id: "<token>", ttl: 1209600, created: "2017-01-01T00:00:00.000Z", userId: 1}
-    });
+    console.log(this.userLogin)
+    // userLogin(
+    //   {
+    //   credentials:{
+    //     name:"xiaoming"
+    //   }  
+    // }).then(function(response) {
+    //   console.log(response.data); // {id: "<token>", ttl: 1209600, created: "2017-01-01T00:00:00.000Z", userId: 1}
+    // });
   },
   destroyed() {
     console.log("destroyed");

@@ -15,7 +15,8 @@ import loadTime from './utils/loadTime'
 
 
 import animate from 'animate.css'
-
+import { setDomain } from '../client/javascript/vue-api-client.js'
+setDomain('http://rap2api.taobao.org/app/mock/183494/swagger/api')
 
 //离线时启动workbox服务
 // if ('serviceWorker' in navigator) {
