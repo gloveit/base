@@ -1,24 +1,25 @@
 const state = {
   carts: [],
+  cartName:"GY高端商城"
 }
 const getters = {
    ca(state){
-    return state.carts
+    return state.carts;
    }
 }
 const mutations = {
   cartsAdd(state,data){
-    console.log($store)
     state.carts.push(data)
   }
 }
 const actions = {
-  handleCarts ({commit,state},data){
+  handleCarts({ commit, state, rootState, rootGetters },data){
     commit('cartsAdd',data)
   }
 }
 
 export default {
+  namespaced:true,
   state,
   getters,
   actions,

@@ -18,6 +18,7 @@
         {{ca}}
 		</div>
 		<button>购买</button>
+		<p>{{cartN}}</p>
 	</div>
 </template>
 
@@ -31,11 +32,24 @@ export default {
 		}
 	},
 	computed:{
-		...mapGetters(['ca'])
+		...mapGetters({
+			ca:'cart/ca'
+		}),
+		// ca(){
+		// 	console.log(this.$store.getters['cart/ca'])
+		// 	return this.$store.getters['cart/ca']
+		// },
+		...mapState({
+			cartN:(state)=>state.cart.cartName
+		})
+		// cartN(){
+		// 	console.log(this.$store.state.cart.cartName)
+		// 	return this.$store.cartName
+		// }
 	},
   methods:{
 		handleAddShop (data) {
-			this.$store.dispatch('handleCarts',data)
+			this.$store.dispatch('cart/handleCarts',data)
 		}
 	},
 	beforeMount () {

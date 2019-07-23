@@ -2,23 +2,24 @@ const state = {
     pro: "this is pro"
 }
 const getters = {
-    ca(state) {
-        return state.carts
+    proA(state) {
+        return "this is pro getters"
     }
 }
 const mutations = {
-    cartsAdd(state, data) {
+    cartAdd(state, data) {
         state.carts.push(data)
     }
 }
 const actions = {
     handleCarts({ commit, state }, data) {
         console.log(data)
-        commit('cartsAdd', data)
+        commit('cartAdd', data)
     }
 }
 
 export default {
+    namespaced: true,
     state,
     getters,
     actions,
