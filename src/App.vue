@@ -40,6 +40,12 @@
       <a-breadcrumb-item>
         <router-link to="/jsx">jsx/render</router-link>
       </a-breadcrumb-item>
+      <a-breadcrumb-item>
+        <router-link to="/tvuex">状态管理</router-link>
+      </a-breadcrumb-item>
+      <a-breadcrumb-item>
+        <router-link to="/shop">购物车</router-link>
+      </a-breadcrumb-item>
     </a-breadcrumb>
 
     <!-- 手动引导页 -->

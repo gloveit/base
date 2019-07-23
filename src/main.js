@@ -5,6 +5,7 @@ import 'ant-design-vue/dist/antd.css'
 import router from './router'
 import store from './store'
 import VueTour from 'vue-tour'
+import svuex from './svuex'
 
 import 'vue-tour/dist/vue-tour.css'
 // import _ from 'lodash';
@@ -62,6 +63,18 @@ Vue.prototype.animate = animate
 //     next()
 //   }
 // })
+const mstore = new svuex.Mstore({
+  state:{
+    account:1,
+    address:"goldcard"
+  },
+  mutations:{
+    addC(state,data){
+      state.account +=data; 
+    }
+  }
+})
+Vue.prototype.$mstore = mstore;
 
 new Vue({
   router,
