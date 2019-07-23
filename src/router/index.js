@@ -54,6 +54,16 @@ export default new Router({
 			path: "/jsx",
 			name: "jsx",
 			component: () => import('@/components/jsx/index.vue')
+		},
+		{
+			path: "/tvuex",
+			name: "tvuex",
+			component: () => import('@/components/tvuex/index.vue')
+		},
+		{
+			path: "/shop",
+			name: "shop",
+			component: () => import('@/components/shop/index.vue')
 		}
 	]
 })
