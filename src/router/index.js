@@ -1,6 +1,7 @@
 import Router from 'vue-router'
 import Vue from 'vue'
 import HelloWorld from '@/components/HelloWorld.vue'
+import first from '@/components/nestRoute/first.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -12,12 +13,12 @@ export default new Router({
 			// component:()=>import('@/components/HelloWorld.vue')
 			component: HelloWorld
 		},
-		{
-			path: "/Prop",
-			name: "Prop",
-			component: () => import(/* webpackChunkName: "user" */ '@/components/Prop.vue')
+		// {
+		// 	path: "/Prop",
+		// 	name: "Prop",
+		// 	component: () => import(/* webpackChunkName: "user" */ '@/components/Prop.vue')
 
-		},
+		// },
 		{
 			path: "/Detail",
 			name: "Detail",
@@ -64,6 +65,31 @@ export default new Router({
 			path: "/shop",
 			name: "shop",
 			component: () => import('@/components/shop/index.vue')
+		},
+		{
+			path: '/nestRoute/:id',
+			name: "nestRoute",
+			component: () => import('@/components/nestRoute/index.vue'),
+			beforeEnter:(to,form,next)=>{
+				console.log(to)
+				if(to.name === 'nestRoute'){
+					next({name:'HelloWorld'})
+				}else{
+					next();
+				}
+			},
+			children: [
+				{
+					path: 'first',
+					name: "first",
+					component:first,
+					// component: () => import('@/components/nestRoute/first.vue'),
+				}
+		    ]
+		},
+	    {
+			path:"/",
+			redirect: '/HelloWorld'
 		}
 	]
 })

@@ -46,6 +46,9 @@
       <a-breadcrumb-item>
         <router-link to="/shop">购物车</router-link>
       </a-breadcrumb-item>
+      <a-breadcrumb-item>
+        <router-link to="/nestRoute/18">路由嵌套</router-link>
+      </a-breadcrumb-item>
     </a-breadcrumb>
 
     <!-- 手动引导页 -->

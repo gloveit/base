@@ -13,7 +13,7 @@
 import jsx from './jsx.vue'
 import renH from './render.js'
 export default {
-	name:"index",
+	name:"jindex",
 	components: {
 		jsx,
 		renH,
